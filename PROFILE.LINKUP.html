@@ -83,66 +83,41 @@
       color: #374151;
     }
 
-    .editable {
+    .info-text {
       margin-top: 6px;
       font-size: 0.95em;
       color: #444;
     }
 
-    .editable[contenteditable="true"]:focus {
-      outline: 2px solid #60a5fa;
-      background: #f9fafb;
-      border-radius: 6px;
-      padding: 4px;
-    }
-
-    .add-link {
-      color: #2563eb;
-      cursor: pointer;
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.9em;
-    }
-
-    .add-link:hover {
-      text-decoration: underline;
-    }
-
-    .edit-text {
-      color: #6b7280;
-      font-size: 0.9em;
-      cursor: text;
-    }
     .back-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  text-decoration: none;
-  background: #2563eb;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s;
-  font-family: 'Poppins', sans-serif;
-}
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      background: #2563eb;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
 
-.back-btn:hover {
-  background: #1e40af;
-}
+    .back-btn:hover {
+      background: #1e40af;
+    }
 
   </style>
 </head>
 <body>
-  <a href="new5.html" class="back-btn">← Back</a>
-
+  <a href="try.html" class="back-btn">← Back</a>
 
   <div class="profile-container">
     <h1>My Profile</h1>
 
     <div class="profile-pic">O</div>
 
-    <div class="name" contenteditable="true">Oojass Kwatra</div>
+    <div class="name">Oojass Kwatra</div>
 
     <div style="text-align:center; margin-top:10px;">
       <button class="btn">Set Status</button>
@@ -151,19 +126,15 @@
     <div class="section">
       <div class="section-header">
         <span>Contact Information</span>
-        <span class="edit-text">(Edit)</span>
       </div>
-      <div class="editable" contenteditable="true">Email: 124@gmail.com</div>
-      <div class="add-link" contenteditable="true">+ Add Phone</div>
+      <div class="info-text">Email: abc@gmail.com</div>
     </div>
 
     <div class="section">
       <div class="section-header">
         <span>About Me</span>
-        <span class="edit-text">(Edit)</span>
       </div>
-      <div class="editable" contenteditable="true">Write something about yourself...</div>
-      <div class="add-link" contenteditable="true">+ Add start date</div>
+      <div class="info-text">Write something about yourself...</div>
     </div>
   </div>
 
