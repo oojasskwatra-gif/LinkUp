@@ -39,6 +39,7 @@
       display: flex;
       align-items: center;
     }
+    
 
     .main {
       flex: 1;
@@ -421,25 +422,15 @@
       const messageArea = box.querySelector(".chat-messages");
 
       function sendMessage() {
-        const text = input.value.trim();
+        const text = input.value;
         if (text === "") return;
 
         const bubble = document.createElement("div");
         bubble.className = "chat-message self";
         bubble.textContent = text;
-        
-        bubble.style.opacity = "0";
-        bubble.style.transform = "translateY(10px)";
-        bubble.style.transition = "all 0.3s ease";
 
         messageArea.appendChild(bubble);
 
-        setTimeout(() => {
-            bubble.style.opacity = "1";
-            bubble.style.transform = "translateY(0)";
-            // Scroll 
-            messageArea.scrollTop = messageArea.scrollHeight;
-        }, 10);
 
         input.value = "";
       }
@@ -450,11 +441,8 @@
         if (e.key === "Enter") {
           sendMessage();
         }
-      });
-      
-      messageArea.scrollTop = messageArea.scrollHeight;
+      });  
     }
-
     enableChat("ashita");
     enableChat("ajay");
     
